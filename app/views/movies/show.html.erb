@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="group">
+    <%= link_to("编辑", edit_movie_path(@movie), class: "btn btn-default pull-right") %>
+  </div>
+
+  <h2><%= @movie.title %></h2>
+  <p style="font-size:10px; margin-bottom:30px;">创建时间:<%= @movie.created_at%></p>
+  <p><%= @movie.description %></p>
+</div>
