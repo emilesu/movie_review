@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :find_movie_and_check_permission, only: [:edit, :update, :destroy]
 
   def index
@@ -8,6 +8,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @reviews = @movie.reviews.recent
   end
 
   def new

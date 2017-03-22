@@ -9,4 +9,23 @@
   <h2><%= @movie.title %></h2>
   <p style="font-size:10px; margin-bottom:30px;">创建时间:<%= @movie.created_at%></p>
   <p><%= @movie.description %></p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>影片评价</th>
+        <th>发表者</th>
+        <th>发表时间</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= @reviews.each do |review| %>
+        <tr>
+          <td><%= review.content %></td>
+          <td><%= review.user.email %></td>
+          <td><%= review.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
