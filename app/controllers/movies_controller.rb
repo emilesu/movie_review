@@ -34,6 +34,12 @@ class MoviesController < ApplicationController
     end
   end
 
+  def destroy
+    @movie = Movie.find(params[:id])
+
+      redirect_to movies_path, notice: "已删除电影 - "+@movie.title
+  end
+
 
 
 
