@@ -32,7 +32,7 @@
       </tr>
     </thead>
     <tbody>
-      <%= @reviews.each do |review| %>
+      <% @reviews.each do |review| %>
         <tr>
           <td><%= review.content %></td>
           <td><%= review.user.email %></td>
