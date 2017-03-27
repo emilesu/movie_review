@@ -68,6 +68,9 @@ class MoviesController < ApplicationController
     redirect_to movie_path(@movie)
   end
 
+  def about2
+  end
+
 
   private
 
